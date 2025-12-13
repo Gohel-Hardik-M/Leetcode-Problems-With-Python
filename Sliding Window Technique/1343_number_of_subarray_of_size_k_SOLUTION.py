@@ -22,3 +22,18 @@ Explanation: The first 6 sub-arrays of size 3 have averages greater than 5. Note
 
 
 '''
+
+# SOLUTION CODE :- 
+
+def number_of_subarrays(arr,k,threshold):
+  count_ = 0
+  win_sum = 0
+  for i in range(0,k):
+    win_sum +=arr[i]
+  if(win_sum/k >=threshold):
+    count_ +=1
+  for i in range(k,len(arr)):
+    win_sum += arr[i] - arr[i-k]
+    if(win_sum/k >= threshold):
+      count_ +=1
+ return count_
