@@ -1,0 +1,106 @@
+🪟 Sliding Window Technique (Short Notes)
+✅ What Is Sliding Window?
+Sliding Window is a technique used to efficiently process contiguous parts of arrays or strings by maintaining a moving “window” instead of recalculating everything repeatedly. It reduces many brute‑force 
+𝑂
+(
+𝑛
+2
+)
+ problems to 
+𝑂
+(
+𝑛
+)
+.
+
+✅ When to Use Sliding Window
+Use it when the problem involves:
+
+Contiguous subarrays or substrings
+
+Finding maximum/minimum sum, average, or length
+
+Counting or tracking elements inside a moving range
+
+Conditions like:
+
+“length = k”
+
+“longest substring with…”
+
+“smallest subarray with…”
+
+✅ Types of Sliding Window
+
+            ** 1️⃣ Fixed-Size Window **
+            ___________________________
+
+-Window size is constant (e.g., exactly k elements).
+
+Used for:
+
+Maximum average subarray
+
+Maximum sum of size k
+
+Count subarrays of size k
+
+✅ Example (Fixed Size)
+Problem: Maximum sum of any subarray of size k.
+
+CODE EXAMPLE :
+-------------
+def max_sum_k(nums, k):
+    window_sum = sum(nums[:k])
+    max_sum = window_sum
+
+    for i in range(k, len(nums)):
+        window_sum += nums[i] - nums[i - k]   # slide window
+        max_sum = max(max_sum, window_sum)
+
+    return max_sum
+
+# Example
+print(max_sum_k([2, 1, 5, 1, 3, 2], 3))  # Output: 9
+
+
+         ** 2️⃣ Variable-Size Window   **
+            ________________________
+Window expands and shrinks based on a condition.
+
+Used for:
+
+Longest substring without repeating characters
+
+Smallest subarray with sum ≥ target
+
+At most K distinct characters
+
+✅ Example (Variable Size)
+Problem: Length of longest substring without repeating characters.
+
+CODE EXAMPLE :
+------------
+def longest_unique_substring(s):
+    seen = set()
+    left = 0
+    max_len = 0
+
+    for right in range(len(s)):
+        while s[right] in seen:
+            seen.remove(s[left])
+            left += 1
+
+        seen.add(s[right])
+        max_len = max(max_len, right - left + 1)
+
+    return max_len
+
+# Example
+print(longest_unique_substring("abcabcbb"))  # Output: 3
+✅ Summary
+Sliding Window is ideal for contiguous array/string problems.
+
+Two main types: Fixed-size and Variable-size.
+
+Reduces complexity to O(n) using two pointers (left, right).
