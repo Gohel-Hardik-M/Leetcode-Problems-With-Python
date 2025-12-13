@@ -54,3 +54,20 @@ Each solution file is named like:
             ProblemNo_name.py
 
 
+---
+
+## 📝 Notes
+
+Some solutions may include:
+- Multiple approaches  
+- Optimized vs brute‑force versions  
+- Comments explaining logic  
+
+---
+
+## ⭐ Support
+
+If you find this helpful, consider starring ⭐ the repo.  
+It motivates me to keep learning and uploading more solutions.
+
+
