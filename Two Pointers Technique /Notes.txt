@@ -1,1 +1,86 @@
-twnwe
+                                                            ----------------------------
+                                                             * TWO POINTERS TECHNIQUE *
+                                                            -----------------------------
+
+The Two Pointers technique uses two indices to traverse a data structure (usually an array or string) in a coordinated way. It helps reduce time complexity by avoiding unnecessary nested loops. Common pointer movements include:
+
+Moving from both ends toward the center
+
+Moving one fast, one slow
+
+Moving both forward at different speeds
+
+Shrinking or expanding a window
+
+When to Use Two Pointers
+Use this technique when:
+
+The input is sorted
+
+You need to find pairs or triplets
+
+You want to remove duplicates
+
+You need to reverse, partition, or compare sequences
+
+You want to detect cycles in linked lists
+
+You want to solve subarray/substring problems efficiently
+
+Common Patterns
+1. Opposite Ends (Left + Right)
+Used for:
+
+Pair sum (Two Sum in sorted array)
+
+Checking palindromes
+
+Container With Most Water
+
+Trapping Rain Water (variant)
+
+Idea: Start with left = 0 and right = n - 1. Move pointers inward based on conditions.
+
+2. Fast and Slow Pointers
+Used for:
+
+Cycle detection (Floyd’s algorithm)
+
+Middle of linked list
+
+Removing nth node from end
+
+Detecting happy numbers
+
+Idea: slow moves 1 step, fast moves 2 steps.
+
+3. Same Direction (Two Forward Pointers)
+Used for:
+
+Removing duplicates in sorted array
+
+Partitioning arrays
+
+Filtering elements
+
+Idea: One pointer reads, the other writes.
+
+4. Sliding Window (Two Pointers Variant)
+Used for:
+
+Longest substring without repeating characters
+
+Minimum window substring
+
+Fixed/variable window problems
+
+Idea: left expands or shrinks the window while right moves forward.
+
+# Time & Space Complexity
+Time: Usually 
+𝑂(𝑛)
+ because each pointer moves at most n steps.
+
+# Space: 
+𝑂(1)
+ — no extra data structures needed.
