@@ -1,7 +1,7 @@
                                                             ----------------------------
                                                              * TWO POINTERS TECHNIQUE *
                                                             -----------------------------
-
+  
 The Two Pointers technique uses two indices to traverse a data structure (usually an array or string) in a coordinated way. It helps reduce time complexity by avoiding unnecessary nested loops. Common pointer movements include:
 
 Moving from both ends toward the center
